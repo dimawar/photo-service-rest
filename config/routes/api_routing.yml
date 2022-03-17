@@ -1,0 +1,18 @@
+#api_categories:
+#  path: /categories
+#  defaults: { _controller: App\Controller\Api\CategoryController::index }
+
+api_product:
+  path: /product/{code}
+  defaults: { _controller: App\Controller\ApiController::one }
+  methods: ['GET']
+
+api_product_create:
+  path: /product
+  defaults: { _controller: App\Controller\ApiController::editProduct }
+  methods: ['POST']
+
+api_product_update:
+  path: /product/{code}
+  defaults: { _controller: App\Controller\ApiController::editProduct }
+  methods: ['PUT']

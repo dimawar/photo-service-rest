@@ -1,0 +1,167 @@
+# See dos how to configure the bundle: https://symfony.com/doc/current/bundles/LiipImagineBundle/basic-usage.html
+liip_imagine:
+  # valid drivers options include "gd" or "gmagick" or "imagick"
+  driver: "gd"
+  resolvers:
+    default:
+      web_path: ~
+
+#  cache: default
+
+  #
+  #    # define your filter sets under this option
+  filter_sets:
+    #
+    #        # an example thumbnail transformation definition
+    #        # https://symfony.com/doc/current/bundles/LiipImagineBundle/basic-usage.html#create-thumbnails
+    squared_thumbnail:
+      #
+      #            # set your image quality defaults
+      jpeg_quality:          85
+      png_compression_level: 8
+      #
+      #            # setup the filter steps to apply for this transformation
+      filters:
+        #
+        #                # auto rotate the image using EXIF metadata
+        auto_rotate: ~
+        #
+        #                # strip the image of all metadata
+        strip: ~
+        #
+        #                # scale and square the image to the given dimensions
+        thumbnail:
+          size:          [253, 253]
+          mode:          outbound
+          allow_upscale: true
+        #
+        #                # create border by placing image on larger black background
+        background:
+          size:     [256, 256]
+          position: center
+          color:    '#fff'
+    thumb_540_600:
+      jpeg_quality:          85
+      png_compression_level: 8
+      filters:
+        auto_rotate: ~
+        strip: ~
+        scale:
+          dim:      [540, 600]
+        background:
+          size:     [540, 600]
+          position: center
+          color:    '#fff'
+    thumb_1620_1800:
+      jpeg_quality:          85
+      png_compression_level: 8
+      filters:
+        auto_rotate: ~
+        strip: ~
+        scale:
+          dim:      [1620, 1800]
+        background:
+          size:     [1620, 1800]
+          position: center
+          color:    '#fff'
+    thumb_400_400_png:
+      png_compression_level: 8
+      filters:
+        auto_rotate: ~
+        strip: ~
+        scale:
+          dim:      [400, 400]
+        background:
+          size:     [400, 400]
+          position: center
+          transparency: 100
+
+    thumb_1920_1080:
+      jpeg_quality:          85
+      png_compression_level: 8
+      filters:
+        auto_rotate: ~
+        strip: ~
+        scale:
+          dim:      [1920, 1080]
+        background:
+          size:     [1920, 1080]
+          position: center
+          color:    '#fff'
+    thumb_1920_1280:
+      jpeg_quality:          85
+      png_compression_level: 8
+      filters:
+        auto_rotate: ~
+        strip: ~
+        scale:
+          dim:      [1920, 1280]
+        background:
+          size:     [1920, 1280]
+          position: center
+          color:    '#fff'
+    thumb_192_128:
+      jpeg_quality:          85
+      png_compression_level: 8
+      filters:
+        auto_rotate: ~
+        strip: ~
+        thumbnail:
+          size:          [192, 128]
+          mode:          outbound
+          allow_upscale: true
+        background:
+          size:     [192, 128]
+          position: center
+          color:    '#fff'
+    thumb_162_120:
+      jpeg_quality:          85
+      png_compression_level: 8
+      filters:
+        auto_rotate: ~
+        strip: ~
+        thumbnail:
+          size:          [162, 120]
+          mode:          outbound
+          allow_upscale: true
+        background:
+          size:     [162, 120]
+          position: center
+          color:    '#fff'
+    thumb_1920_500:
+      jpeg_quality:          85
+      png_compression_level: 8
+      filters:
+        auto_rotate: ~
+        strip: ~
+        scale:
+          dim:      [1920, 500]
+        background:
+          size:     [1920, 500]
+          position: center
+          color:    '#fff'
+
+    thumb_640_640:
+      jpeg_quality:          85
+      png_compression_level: 8
+      filters:
+        auto_rotate: ~
+        strip: ~
+        scale:
+          dim:      [640, 640]
+        background:
+          size:     [640, 640]
+          position: center
+          color:    '#fff'
+    thumb_840_840:
+      jpeg_quality:          85
+      png_compression_level: 8
+      filters:
+        auto_rotate: ~
+        strip: ~
+        scale:
+          dim:      [840, 840]
+        background:
+          size:     [840, 840]
+          position: center
+          color:    '#fff'
